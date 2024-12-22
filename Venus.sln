@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsWinRTApp", "CsWinRTApp\Cs
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppCLI", "CppCLI\CppCLI.vcxproj", "{FBDF9107-4348-45A3-B4DB-526667655B52}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Venus", "Venus\Venus.vcxproj", "{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -37,6 +39,18 @@ Global
 		{FBDF9107-4348-45A3-B4DB-526667655B52}.Release|x64.Build.0 = Release|x64
 		{FBDF9107-4348-45A3-B4DB-526667655B52}.RelWithDebInfo|x64.ActiveCfg = Release|x64
 		{FBDF9107-4348-45A3-B4DB-526667655B52}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.Debug|x64.ActiveCfg = Debug|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.Debug|x64.Build.0 = Debug|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.Debug|x64.Deploy.0 = Debug|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.MinSizeRel|x64.ActiveCfg = Debug|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.MinSizeRel|x64.Build.0 = Debug|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.MinSizeRel|x64.Deploy.0 = Debug|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.Release|x64.ActiveCfg = Release|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.Release|x64.Build.0 = Release|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.Release|x64.Deploy.0 = Release|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.RelWithDebInfo|x64.ActiveCfg = Release|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.RelWithDebInfo|x64.Deploy.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
