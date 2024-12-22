@@ -14,6 +14,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppCLI", "CppCLI\CppCLI.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Venus", "Venus\Venus.vcxproj", "{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MTQuark", "build\windows\quark\MTQuark.vcxproj", "{5AB9B973-022B-30A3-8428-FDA59D1094F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.RelWithDebInfo|x64.ActiveCfg = Release|x64
 		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.RelWithDebInfo|x64.Build.0 = Release|x64
 		{6FB0F17D-96BB-4FFA-985E-08D6D690A16B}.RelWithDebInfo|x64.Deploy.0 = Release|x64
+		{5AB9B973-022B-30A3-8428-FDA59D1094F4}.Debug|x64.ActiveCfg = Debug|x64
+		{5AB9B973-022B-30A3-8428-FDA59D1094F4}.Debug|x64.Build.0 = Debug|x64
+		{5AB9B973-022B-30A3-8428-FDA59D1094F4}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{5AB9B973-022B-30A3-8428-FDA59D1094F4}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{5AB9B973-022B-30A3-8428-FDA59D1094F4}.Release|x64.ActiveCfg = Release|x64
+		{5AB9B973-022B-30A3-8428-FDA59D1094F4}.Release|x64.Build.0 = Release|x64
+		{5AB9B973-022B-30A3-8428-FDA59D1094F4}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{5AB9B973-022B-30A3-8428-FDA59D1094F4}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

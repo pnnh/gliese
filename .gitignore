@@ -8,3 +8,5 @@ obj/
 bin/
 ARM64/
 _build/
+build/
+.idea/
