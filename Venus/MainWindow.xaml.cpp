@@ -5,9 +5,11 @@
 #endif
 
 #include "ImageFileInfo.h"
-#include <spdlog/spdlog.h>
-#include <spdlog/sinks/msvc_sink.h>
 #include <algorithm>
+#include <iostream>
+
+#include "MathLibrary.h"
+#include "quark/services/logger/logger.h"
 
 namespace winrt
 {
@@ -25,11 +27,25 @@ using namespace Microsoft::UI::Xaml;
 
 namespace winrt::Venus::implementation
 {
-    MainWindow::MainWindow() :
+    MainWindow::MainWindow() : MainWindowT<MainWindow>(),
         m_images(winrt::single_threaded_observable_vector<IInspectable>())
     {
         InitializeComponent();
         GetItemsAsync();
+
+
+        quark::Logger::LogInfo({"hello", "world"});
+        // Initialize a Fibonacci relation sequence.
+        fibonacci_init(1, 1);
+        // Write out the sequence values until overflow.
+        do {
+            std::cout << fibonacci_index() << ": "
+                << fibonacci_current() << std::endl;
+        } while (fibonacci_next());
+        // Report count of values written before overflow.
+        std::cout << fibonacci_index() + 1 <<
+            " Fibonacci sequence values fit in an " <<
+            "unsigned 64-bit integer." << std::endl;
     }
 
     IAsyncAction MainWindow::GetItemsAsync()
@@ -50,14 +66,6 @@ namespace winrt::Venus::implementation
 
     IAsyncOperation<Venus::ImageFileInfo> MainWindow::LoadImageInfoAsync(StorageFile file)
     {
-        auto sink = std::make_shared<spdlog::sinks::msvc_sink_mt>();
-        auto logger = std::make_shared<spdlog::logger>("msvc_logger", sink);
-        logger->critical("Use output to view this message.");
-
-        // 以下日志不会输出到Output窗口
-        spdlog::debug("i love c++1");
-        spdlog::info("i love c++2");
-        spdlog::error("i love c++3");
         auto properties = co_await file.Properties().GetImagePropertiesAsync();
         Venus::ImageFileInfo info(properties,
             file, file.DisplayName(), file.DisplayType());

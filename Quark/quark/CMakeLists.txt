@@ -5,7 +5,6 @@ if (MSVC)
     set(MTAPI "__declspec (dllexport)")
 endif ()
 
-configure_file("build.h.in" "${PROJECT_BINARY_DIR}/build.h")
 
 file(GLOB_RECURSE QUARK_SOURCES
         business/*.cpp

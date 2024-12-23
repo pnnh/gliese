@@ -1,0 +1,1 @@
+#define MTAPI __declspec (dllexport)
