@@ -37,6 +37,10 @@ namespace CsWinRTApp
         {
             myButton.Content = "Clicked";
 
+            var cls = new CppWinRTComponent.Class();
+            var sum = cls.Add(2, 3);
+            Console.WriteLine($"sum: {sum}");
+
 
             var stackPanel = new StackPanel();
             stackPanel.Orientation = Orientation.Horizontal;
@@ -59,6 +63,8 @@ namespace CsWinRTApp
             {
                 Console.WriteLine($"file name: {file.URN}");
             }
+
+
         }
     }
 }
