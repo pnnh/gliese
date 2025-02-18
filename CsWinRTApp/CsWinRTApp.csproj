@@ -12,6 +12,11 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="MainPage.xaml" />
+    <None Remove="Pages\Page2.xaml" />
+    <None Remove="Pages\Page3.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <Page Remove="Themes\Generic.xaml" />
@@ -54,6 +59,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Pages\Page2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Pages\Page3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <None Update="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>

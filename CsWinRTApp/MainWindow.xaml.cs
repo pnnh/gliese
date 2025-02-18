@@ -33,38 +33,6 @@ namespace CsWinRTApp
         private void Window_Activated(object sender, WindowActivatedEventArgs args)
         {
         }
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            myButton.Content = "Clicked";
 
-            var cls = new CppWinRTComponent.Class();
-            var sum = cls.Add(2, 3);
-            Console.WriteLine($"sum: {sum}");
-
-
-            var stackPanel = new StackPanel();
-            stackPanel.Orientation = Orientation.Horizontal;
-            stackPanel.HorizontalAlignment = HorizontalAlignment.Left;
-            stackPanel.VerticalAlignment = VerticalAlignment.Top;
-
-            var newButton = new Button();
-            newButton.Content = "NewButton";
-
-            stackPanel.Children.Add(newButton);
-
-            FilesStack.Children.Add(stackPanel);
-
-            var aaa = Logger.Info("xxxxxx333");
-            Console.WriteLine($"aaa = {aaa}");
-
-            var fileService = new GSFilesystemService();
-            var filesList = fileService.selectFiles();
-            foreach (var file in filesList)
-            {
-                Console.WriteLine($"file name: {file.URN}");
-            }
-
-
-        }
     }
 }
