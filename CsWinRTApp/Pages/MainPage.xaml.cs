@@ -14,6 +14,8 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using CsWinRTApp.Pages;
 using Microsoft.UI.Xaml.Media.Animation;
+using CppCLI;
+using Gliese;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,12 +39,39 @@ namespace CsWinRTApp
             });
         }
 
-        private void Page3HyperlinkClick(object sender, RoutedEventArgs e)
+
+        private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Page3), name.Text, new SlideNavigationTransitionInfo
+            myButton.Content = "Clicked";
+
+            var cls = new CppWinRTComponent.Class();
+            var sum = cls.Add(2, 3);
+            Console.WriteLine($"sum: {sum}");
+
+
+            var stackPanel = new StackPanel();
+            stackPanel.Orientation = Orientation.Horizontal;
+            stackPanel.HorizontalAlignment = HorizontalAlignment.Left;
+            stackPanel.VerticalAlignment = VerticalAlignment.Top;
+
+            var newButton = new Button();
+            newButton.Content = "NewButton";
+
+            stackPanel.Children.Add(newButton);
+
+            FilesStack.Children.Add(stackPanel);
+
+            var aaa = Logger.Info("xxxxxx333");
+            Console.WriteLine($"aaa = {aaa}");
+
+            var fileService = new GSFilesystemService();
+            var filesList = fileService.selectFiles();
+            foreach (var file in filesList)
             {
-                Effect = SlideNavigationTransitionEffect.FromBottom
-            });
+                Console.WriteLine($"file name: {file.URN}");
+            }
+
+
         }
     }
 }

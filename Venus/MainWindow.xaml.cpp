@@ -9,7 +9,7 @@
 #include <iostream>
 
 #include "gliese/logger/logger.h"
-#include "quark/services/logger/logger.h"
+#include "quark/services/logger/logger.hpp"
 
 namespace winrt
 {

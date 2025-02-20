@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Filesystem.h"
 
-#include <quark/business/filesystem/file.h>
+#include <quark/business/filesystem/file.hpp>
 
 #include "quark/services/filesystem/filesystem.h"
 
@@ -19,11 +19,11 @@ Gliese::GSFileModel::GSFileModel(const GSFileModel% other)
 List<Gliese::GSFileModel^>^ Gliese::GSFilesystemService::selectFiles()
 {
     auto resolvePath = std::string("C:\\Projects\\Pnnh\\blog");
-    auto fileServer = std::make_shared<quark::FileServerBusiness>(resolvePath);
-    auto filesPtr = fileServer->selectFiles();
+    auto fileServer = std::make_shared<quark::FileServerBusiness>();
+	auto filesPtr = fileServer->selectFilesVector(resolvePath);
 
     List<GSFileModel^>^ modelsList = gcnew List<GSFileModel^>(1);
-    for (const auto& model : *filesPtr)
+    for (const auto& model : filesPtr)
     {
         auto gsModel = gcnew GSFileModel();
         gsModel->URN = gcnew String(model.URN.c_str());

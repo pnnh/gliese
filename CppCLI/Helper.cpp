@@ -3,6 +3,8 @@
 
 #pragma managed(push, off)
 #include <iostream>
+#include <quark/services/logger/logger.hpp>
+
 #include "quark/services/logger/logger.h"
 
 int helper::Helper::Write(const char* message)

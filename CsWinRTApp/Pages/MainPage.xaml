@@ -10,15 +10,68 @@
     NavigationCacheMode="Enabled"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel VerticalAlignment="Center">
-        <TextBlock HorizontalAlignment="Center" Text="Enter your name"/>
-        <TextBox HorizontalAlignment="Center" Width="200" x:Name="name"/>
-        <HyperlinkButton Content="Click to go to page 2"
-                         Click="HyperlinkButton_Click"
-                         HorizontalAlignment="Center"/>
+    <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Top"
+          RowDefinitions="*,*"
+          ColumnDefinitions="*">
+        <Grid HorizontalAlignment="Stretch"
+              RowDefinitions="*"
+              ColumnDefinitions="*">
+            <StackPanel VerticalAlignment="Top" Name="MainNavbar" Orientation="Horizontal" 
+                        Background="Blue" Height="32"
+                        >
+                <TextBlock>图标</TextBlock>
+            </StackPanel>
+        </Grid>
 
-        <HyperlinkButton Content="前往页面3"
-                         Click="Page3HyperlinkClick"
-                         HorizontalAlignment="Center"></HyperlinkButton>
-    </StackPanel>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Left"
+              RowDefinitions="*"
+              ColumnDefinitions="*, *"
+              >
+
+            <Border  Background="#C7C7C7" Width="256" BorderBrush="Black" BorderThickness="1"> 
+                    <StackPanel Name="LocationStack" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                
+                                Background="Transparent">
+                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <TextBlock>位置</TextBlock>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Button x:Name="myButton" Click="myButton_Click">主目录</Button>
+                        </StackPanel>
+                        <StackPanel>
+
+                            <TextBlock HorizontalAlignment="Center" Text="Enter your name"/>
+                            <TextBox HorizontalAlignment="Center" Width="200" x:Name="name"/>
+                            <HyperlinkButton Content="Click to go to page 2"
+                                             Click="HyperlinkButton_Click"
+                                             HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Button x:Name="myButton2" Click="myButton_Click">图片</Button>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Button x:Name="myButton3" Click="myButton_Click">文档</Button>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Button x:Name="myButton4" Click="myButton_Click">下载</Button>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+                <StackPanel Name="FilesStack" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Width="256">
+                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock>文件1</TextBlock>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock>文件2</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+        </Grid>
+
+    </Grid>
+
 </Page>

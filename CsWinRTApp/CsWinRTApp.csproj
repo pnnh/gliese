@@ -15,7 +15,6 @@
   <ItemGroup>
     <None Remove="MainPage.xaml" />
     <None Remove="Pages\Page2.xaml" />
-    <None Remove="Pages\Page3.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,9 +62,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="Pages\Page2.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Pages\Page3.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <None Update="Themes\Generic.xaml">
