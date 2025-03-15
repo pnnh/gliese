@@ -2,7 +2,6 @@
 
 #include "CppCLI.h"
 #include <iostream>
-#include <quark/services/logger/logger.hpp>
 
 #include "Helper.h"
 #include "gliese/logger/logger.h"
