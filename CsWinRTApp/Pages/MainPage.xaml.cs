@@ -13,9 +13,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using CsWinRTApp.Pages;
-using Microsoft.UI.Xaml.Media.Animation;
-using CppCLI;
-using Gliese;
+using Microsoft.UI.Xaml.Media.Animation; 
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -61,16 +59,8 @@ namespace CsWinRTApp
 
             FilesStack.Children.Add(stackPanel);
 
-            var aaa = Logger.Info("xxxxxx333");
-            Console.WriteLine($"aaa = {aaa}");
-
-            var fileService = new GSFilesystemService();
-            var filesList = fileService.selectFiles();
-            foreach (var file in filesList)
-            {
-                Console.WriteLine($"file name: {file.URN}");
-            }
-
+            //var aaa = Logger.Info("xxxxxx333");
+            //Console.WriteLine($"aaa = {aaa}");
 
         }
     }

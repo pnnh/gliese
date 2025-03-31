@@ -53,7 +53,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CppCLI\CppCLI.vcxproj" />
     <ProjectReference Include="..\CppWinRTProjection\CppWinRTProjection.csproj" />
   </ItemGroup>
 
@@ -86,7 +85,4 @@
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y /d &quot;..\build\windows\quark\Debug\*.dll&quot; &quot;$(OutDir)\AppX&quot;" />
-  </Target>
 </Project>
