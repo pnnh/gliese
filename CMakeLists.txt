@@ -32,7 +32,12 @@ set(Boost_USE_MULTITHREADED ON)
 
 
 set(LIB_NAME "MTGliese")
-file(GLOB_RECURSE GLIESE_SOURCES gliese/*.cpp quark/*.cpp)
+file(GLOB_RECURSE GLIESE_SOURCES 
+	gliese/*.cpp
+        quark/core/*.cpp
+        quark/infra/*.cpp
+        quark/services/filesystem/*.cpp
+        quark/services/logger/*.cpp)
 
 add_library(${LIB_NAME} STATIC)
 target_sources(${LIB_NAME} PUBLIC ${GLIESE_SOURCES})
